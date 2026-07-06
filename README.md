@@ -245,6 +245,12 @@ The consumer uploads batched JSONL files to S3.
 
 After data is uploaded to S3, use the queries in `scripts/athena_queries.sql`.
 
+## Athena Query Result
+
+The following screenshot shows stock events stored in Amazon S3 and queried through Athena.
+
+![Athena query results](docs/images/athena-query-results.png)
+
 Main steps:
 
 ```sql
