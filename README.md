@@ -270,10 +270,12 @@ LIMIT 10;
 
 ## Future Improvements
 
-- Replace CSV simulator with a real stock market API
-- Add WebSocket-based real-time market data producer
-- Convert raw JSONL files to Parquet
-- Add Streamlit dashboard
-- Add data quality checks
-- Add monitoring for producer throughput and consumer lag
-- Add paper trading strategy consumer
+- Replace the CSV simulator with a real stock market API producer
+  - Add `producer_api.py` to fetch live or near-real-time stock prices from an external API
+  - Keep the downstream Kafka, S3, and Athena pipeline unchanged
+- Add a WebSocket-based producer for true streaming market data
+- Convert raw JSONL files to Parquet for more efficient Athena queries
+- Add a Streamlit dashboard to visualize latest stock prices and event counts
+- Add data quality checks for missing values, invalid prices, and duplicate events
+- Add monitoring for producer throughput, consumer lag, and S3 upload failures
+- Add a paper trading strategy consumer for simulated buy/sell signals
