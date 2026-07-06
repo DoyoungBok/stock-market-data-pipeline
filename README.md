@@ -111,7 +111,7 @@ s3://your-bucket-name/stock_ticks/raw/year=YYYY/month=MM/day=DD/hour=HH/
 Example:
 
 ```text
-s3://your-bucket-name/stock_ticks/raw/year=2026/month=07/day=05/hour=09/
+s3://stock-kafka-pipeline-demo/stock_ticks/raw/year=2026/month=07/day=05/hour=09/
 ```
 
 ### 5. Athena Analysis
