@@ -41,7 +41,7 @@ Athena SQL Analysis
 .
 ├── data/
 │   └── sample_stock_prices.csv
-├── output/
+├── output/    # Local generated output, not committed
 │   └── stock_ticks.jsonl
 ├── scripts/
 │   └── athena_queries.sql
