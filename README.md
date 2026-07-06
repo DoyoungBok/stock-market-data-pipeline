@@ -1,6 +1,7 @@
 # Stock Market Real-Time Data Pipeline with Kafka and AWS
 
 This project is a real-time stock market data pipeline built with Kafka, Python, Amazon S3, AWS Glue Data Catalog, and Amazon Athena.
+This repository includes a working local Kafka setup, Python producer/consumer scripts, S3 batch uploads, and Athena SQL queries for analyzing streamed stock events.
 
 The pipeline simulates stock market events from a CSV file, streams them through Kafka, stores the events as JSONL files in Amazon S3, and queries the stored data using Athena SQL.
 
