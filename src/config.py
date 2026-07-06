@@ -14,3 +14,11 @@ S3_PREFIX = os.getenv("S3_PREFIX", "stock_ticks/raw")
 BATCH_SIZE = int(os.getenv("BATCH_SIZE", "10"))
 BATCH_SECONDS = int(os.getenv("BATCH_SECONDS", "10"))
 CONSUMER_GROUP_ID = os.getenv("CONSUMER_GROUP_ID", "stock-s3-consumer") 
+
+ALPHA_VANTAGE_API_KEY = os.getenv("ALPHA_VANTAGE_API_KEY", "")
+API_SYMBOLS = [
+    symbol.strip()
+    for symbol in os.getenv("API_SYMBOLS", "AAPL").split(",")
+    if symbol.strip()
+]
+API_POLL_SECONDS = float(os.getenv("API_POLL_SECONDS", "90"))
