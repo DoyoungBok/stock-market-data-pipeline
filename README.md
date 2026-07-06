@@ -7,20 +7,27 @@ The pipeline simulates stock market events from a CSV file, streams them through
 
 ## Architecture
 
-```text
-CSV Stock Data
-    ↓
-Python Kafka Producer
-    ↓
-Kafka Topic: stock_ticks
-    ↓
-Python Kafka Consumer
-    ↓
-Amazon S3 JSONL Storage
-    ↓
-AWS Glue Data Catalog / Athena External Table
-    ↓
-Athena SQL Analysis
+```mermaid
+flowchart LR
+    A[CSV Stock Data] --> B[Python Kafka Producer]
+    B --> C[(Kafka Topic: stock_ticks)]
+    C --> D[Python Kafka Consumer]
+    D --> E[(Amazon S3 JSONL Storage)]
+    E --> F[Athena External Table]
+    F --> G[Athena SQL Analysis]
+
+    subgraph Local["Local Development"]
+        A
+        B
+        C
+        D
+    end
+
+    subgraph AWS["AWS Cloud"]
+        E
+        F
+        G
+    end
 ```
 
 ## Tech Stack
